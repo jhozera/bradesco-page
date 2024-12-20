@@ -368,6 +368,13 @@ h1{
    .app-geral{
     flex-direction: column;
    }
+
+   .button-a, .button-b, .button-c, .button-d{
+    display: flex;
+    height: 100px;
+    align-items: center;
+
+   }
 }
 
 /* Celulares (abaixo de 768px) */
@@ -425,6 +432,8 @@ h1{
    .button-a, .button-b, .button-c, .button-d{
     display: flex;
     height: 100px;
+    align-items: center;
+
    }
 
 }
@@ -488,5 +497,7 @@ h1{
    .button-a, .button-b, .button-c, .button-d{
     display: flex;
     height: 100px;
+    align-items: center;
    }
+
 }
