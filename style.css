@@ -383,10 +383,13 @@ h1{
         width: 100%;
     }
     
-   .button{
-    flex-wrap: wrap;
-   }
-   
+    .button{
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 25px;
+        margin: 10px;
+       }
+       
 
    .title-bra{
     text-align: center;
@@ -419,7 +422,10 @@ h1{
     text-align: center;
 
    }
-
+   .button-a, .button-b, .button-c, .button-d{
+    display: flex;
+    height: 100px;
+   }
 
 }
 
@@ -481,6 +487,6 @@ h1{
 
    .button-a, .button-b, .button-c, .button-d{
     display: flex;
-    height: 120px;
+    height: 100px;
    }
 }
