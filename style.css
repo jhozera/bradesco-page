@@ -25,21 +25,20 @@ nav{
     width: 100%;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
 }
 
-.pr-pri{
+/* .pr-pri{
     display: flex;
     justify-content: space-between;
     padding: 100px;
     margin: 100px;
-    /* background-color: #ffffff; */
     height: 50vh;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     
-}
+} */
 
 h1{
     font-size: 45px;
@@ -78,12 +77,23 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, #B81570 10%, #CC092F 50%, #CC092F 90%);    
-    height: 70vh;
-    border-radius: 20px;
+    background: #920922;
+    height: 40vh;
     gap: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 15px
+}
+
+.caixa-van a{
+    background-color: #cc092f;
+    color: white;
+    border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px
+    text-decoration: none;
+    height: 40px;
+    width: 80%;
+    align-content: center;
+    margin: 10px;
 }
 
 .caixa-van h2{
@@ -99,13 +109,13 @@ h1{
 .bloco1, .bloco2, .bloco3{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
     border-radius: 20px;
     background-color: #ffffff;
     text-align: center;
     align-items: center;
-    color: #070707;
+    color: #5e6163;
 }
 
 .caixa-mel{
@@ -124,7 +134,7 @@ h1{
     gap: 100px;
     padding-top: 70px;
     margin: 10px;
-    height: 100vh;
+    height: 80vh;
 }
 
 .trc-dt {
@@ -192,7 +202,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100vh;
 }
 
@@ -226,7 +236,6 @@ h1{
     color: #ffffff;
     padding: 20px;
 }
-
 
 
 .footer-content {
@@ -271,9 +280,26 @@ h1{
   }
 
 
-@media (min-width: 1200px) {
+
+  /* Imagem responsiva */
+  .responsive-image {
+    width: 100%; /* A imagem ocupa 50% da largura da tela */
+    height: 100%; /* A imagem preenche toda a altura do contêiner */
+    object-fit: cover; /* Garante que a imagem não distorça e preencha o espaço */
+    display: block;
+  }
   
-}
+
+
+
+
+/* @media (min-width: 1200px) {
+    .trc-pr{
+        height: 110vh;
+       }
+    
+  
+} */
 
 /* Notebooks (entre 992px e 1200px) */
 @media (max-width: 1200px) {
@@ -294,7 +320,7 @@ h1{
    }
 
    .trc-pr{
-    height: 160vh;
+    height: 125vh;
    }
 
    .caixa-van{
@@ -305,6 +331,8 @@ h1{
    .app-geral{
     flex-direction: column;
    }
+
+
 }
 
 /* Tablets (entre 768px e 992px) */
@@ -334,8 +362,7 @@ h1{
    }
 
    .caixa-van{
-    flex-direction: column;
-    height: 160vh;
+    height: 90vh;
    }
 
    .app-geral{
@@ -378,6 +405,22 @@ h1{
     flex-direction: column;
    }
 
+   .caixa-app{
+    overflow: hidden; max-width: 100%; margin: 0 auto;
+   }
+
+   .app-ft img{
+    max-width: 100%;
+    height: auto;
+   }
+
+   .app-ft{
+    margin: 0 auto;
+    text-align: center;
+
+   }
+
+
 }
 
 /* Celulares Pequenos (abaixo de 576px) */
@@ -418,4 +461,18 @@ h1{
     flex-direction: column;
    }
 
+   .caixa-app{
+    overflow: hidden; max-width: 100%; margin: 0 auto;
+   }
+
+   .app-ft img{
+    max-width: 100%;
+    height: auto;
+   }
+
+   .app-ft{
+    margin: 0 auto;
+    text-align: center;
+
+   }
 }
