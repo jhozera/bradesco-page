@@ -73,17 +73,115 @@ h1{
 }
 
 
-.caixa-van{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #920922;
-    height: 60vh;
-    gap: 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 15px
+.centralizador {
+    display: grid;
+    place-items: center; /* Centraliza horizontal e verticalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
 }
 
+.caixa-van {
+    display: grid;
+    grid-template-areas: 
+        "bloco1 bloco2 bloco3"
+        "bloco1 bloco4 bloco5";
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1200px; /* Largura máxima do grid */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    height: 700px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bloco1 {
+    grid-area: bloco1;
+    background-size: cover;
+    background-image: url('./imagem/Vantagens-WPP.jpg');
+    background-position: center;
+    color: #141414;
+    border: solid 3px #171717;
+  }
+  
+  .bloco2 {
+    grid-area: bloco2;
+    background-image: url('./imagem/Vantagens-BSC.jpg');
+    background-size: cover;
+    background-position: center;
+    border: solid 3px #171717;
+
+  }
+  
+  .bloco3 {
+    grid-area: bloco3;
+    background-image: url('./imagem/Vantagens-Loja.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    color: #fff;
+    border: solid 3px #171717;
+
+  }
+  
+  .bloco4 {
+    grid-area: bloco4;
+    background-image: url('./imagem/tem\ as\ melhores\ condições\ \(1\).png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border: solid 3px #171717;
+
+  }
+  
+  .bloco5 {
+    grid-area: bloco5;
+    background-image: url('./imagem/O-banco-da-PJ-Bradesco-lanca-campanha-exclusiva-para-empresarios.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border: solid 3px #171717;
+
+  }
+
+
+  .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.overlay p {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.overlay a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.overlay a:hover {
+    background: #0056b3;
+}
+
+.bloco1, .bloco2, .bloco3, .bloco4, .bloco5, .bloco6 {
+    position: relative; /* Necessário para posicionar a camada de texto */
+}
+  
 .caixa-van a{
     background-color: #cc092f;
     color: white;
@@ -104,18 +202,6 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
 
-}
-
-.bloco1, .bloco2, .bloco3{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 300px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    text-align: center;
-    align-items: center;
-    color: #5e6163;
 }
 
 .caixa-mel{
@@ -500,5 +586,16 @@ h1{
     align-items: center;
     font-size: 18px;
    }
+
+   .caixa-van {
+    grid-template-areas: 
+    "bloco1 bloco1"
+    "bloco2 bloco4  "
+    "bloco3 bloco4"
+    "bloco5 bloco5"
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
 
 }
