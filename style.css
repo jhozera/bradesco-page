@@ -8,7 +8,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: white;
+    background: #171717;
     height: auto;
     width: 100%;
 
@@ -46,7 +46,7 @@ h1{
 
 .button{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;  
     padding: 30px;
     gap: 70px;
     margin: 0;
@@ -58,7 +58,7 @@ h1{
     padding: 20px;
     background: #cc092f;
     height: 200px;
-    width: 1000px;
+    width: 250px;
     font-size: 25px;
     border-radius: 20px;
 
