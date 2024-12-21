@@ -169,9 +169,10 @@ h1{
     text-decoration: none;
     font-weight: bold;
     background: #007bff;
-    padding: 10px 20px;
+    padding: 2px 10px;
     border-radius: 5px;
     transition: background 0.3s ease;
+    font-size: 15px;
 }
 
 .overlay a:hover {
@@ -367,15 +368,39 @@ h1{
 
 
 
-  /* Imagem responsiva */
   .responsive-image {
-    width: 100%; /* A imagem ocupa 50% da largura da tela */
-    height: 100%; /* A imagem preenche toda a altura do contêiner */
-    object-fit: cover; /* Garante que a imagem não distorça e preencha o espaço */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
     display: block;
   }
   
 
+  .highlighted-text {
+    display: flex;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .highlighted-text::before {
+    content: "";
+    display: inline-block;
+    width: 4px; 
+    height: 24px;
+    background-color: red; 
+    margin-right: 10px; 
+    text-align: center;
+ }
+  .description {
+    color:  white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
 
 
 
@@ -502,7 +527,10 @@ h1{
    }
 
    .caixa-app{
-    overflow: hidden; max-width: 100%; margin: 0 auto;
+    overflow: hidden; 
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
    }
 
    .app-ft img{
@@ -566,7 +594,10 @@ h1{
    }
 
    .caixa-app{
-    overflow: hidden; max-width: 100%; margin: 0 auto;
+    overflow: hidden; 
+    max-width: 100%; 
+    margin: 0 auto;
+    height: 100%;
    }
 
    .app-ft img{
