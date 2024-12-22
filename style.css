@@ -25,6 +25,8 @@ nav{
     width: 100%;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
 }
 
 /* .pr-pri{
@@ -365,6 +367,12 @@ h1{
   }
 
 
+
+  .responsive-image {
+  
+  }
+  
+
   .highlighted-text {
     display: flex;
     color: white;
@@ -470,6 +478,13 @@ h1{
     background-color: #555;
 }
 
+/* @media (min-width: 1200px) {
+    .trc-pr{
+        height: 110vh;
+       }
+    
+  
+} */
 
 /* Notebooks (entre 992px e 1200px) */
 @media (max-width: 1200px) {
