@@ -148,7 +148,7 @@ h1{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    background: rgba(0, 0, 0, 0.5); 
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -180,7 +180,7 @@ h1{
 }
 
 .bloco1, .bloco2, .bloco3, .bloco4, .bloco5, .bloco6 {
-    position: relative; /* Necessário para posicionar a camada de texto */
+    position: relative; 
 }
   
 .caixa-van a{
@@ -278,21 +278,22 @@ h1{
     justify-content: center;
     align-items: center;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 27px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
     padding-top: 200px;
     margin: 10px;
 }
 
 
+
 .caixa-app{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
     height: 100vh;
 }
-
 
 
 .app-geral{
@@ -306,7 +307,6 @@ h1{
     flex-direction: column;
     padding: 25px;
     margin: 25px;
-    /* background-color: #2b2a2a; */
     border-radius: 20px;
 }
 
@@ -324,6 +324,23 @@ h1{
     padding: 20px;
 }
 
+.highlighted-textr {
+    display: flex;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .highlighted-textr::before {
+    content: "";
+    display: inline-block;
+    width: 4px; 
+    height: 40px;
+    background-color: red; 
+    margin-right: 10px; 
+    text-align: center;
+ }
+
+
 
 .footer-content {
     background: linear-gradient(to left, #cc092f, #333b8f);
@@ -333,7 +350,6 @@ h1{
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    /* border-radius: 10px 10px 0 0; */
     font-family: Arial, sans-serif;
     margin: 0;
     border-top-left-radius: 20px;
@@ -365,13 +381,7 @@ h1{
     font-size: 12px;
     color: #b5b5b5;
   }
-
-
-
-  .responsive-image {
-  
-  }
-  
+ 
 
   .highlighted-text {
     display: flex;
@@ -386,7 +396,7 @@ h1{
     content: "";
     display: inline-block;
     width: 4px; 
-    height: 24px;
+    height: 40px;
     background-color: red; 
     margin-right: 10px; 
     text-align: center;
@@ -419,6 +429,8 @@ h1{
 .slide {
     width: 100%;
     flex-shrink: 0;
+    animation: slide-animation 20s infinite;
+
 }
 
 .slide img {
@@ -458,17 +470,17 @@ h1{
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
-.navigation label {
+/* .navigation label {
     background-color: #ddd;
     border-radius: 50%;
     width: 12px;
     height: 12px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
+    transition: background-color 0.20s;
+} */
 
 #slide1:checked ~ .navigation label[for="slide1"],
 #slide2:checked ~ .navigation label[for="slide2"],
@@ -477,6 +489,19 @@ h1{
 #slide5:checked ~ .navigation label[for="slide5"] {
     background-color: #555;
 }
+
+@keyframes slide-animation {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+}
+
 
 /* @media (min-width: 1200px) {
     .trc-pr{
