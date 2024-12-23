@@ -234,6 +234,11 @@ h1{
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.trc-pr a{
+    text-decoration: none;
+    color: white;
+}
+
 .trc-dt:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
@@ -262,6 +267,7 @@ h1{
     box-sizing: border-box;
     font-size: 19px;
     font-family: Arial, Helvetica, sans-serif;
+    
 
 
 }
@@ -503,6 +509,11 @@ h1{
 }
 
 
+
+.pr-nav a{
+    text-decoration: none;
+    color: white;
+}
 /* @media (min-width: 1200px) {
     .trc-pr{
         height: 110vh;
@@ -530,7 +541,7 @@ h1{
    }
 
    .trc-pr{
-    height: 125vh;
+    height: 90vh;
    }
 
    .caixa-van{
@@ -542,6 +553,13 @@ h1{
     flex-direction: column;
    }
 
+
+   .caixa-app{
+    overflow: hidden; 
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+   }
 
 }
 
@@ -568,7 +586,7 @@ h1{
    }
 
    .trc-pr{
-    height: 160vh;
+    height: 140vh;
    }
 
    .caixa-van{
@@ -585,6 +603,23 @@ h1{
     align-items: center;
 
    }
+
+   .caixa-app{
+    overflow: hidden; 
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+   }
+
+   .trc-pr{
+    grid-template-areas: 
+    "trc-dt"
+    "trc-dt"
+    "trc-dt"
+    "trc-dt"
+    ;
+
+}
 }
 
 /* Celulares (abaixo de 768px) */
@@ -607,19 +642,25 @@ h1{
         margin: 10px;
        }
        
+    .title-bra{
+        height: auto;
+    }
 
-   .title-bra{
-    text-align: center;
-   }
+
 
    .trc-pr{
-    height: 160vh;
+    height: 130vh;
    }
 
-   .caixa-van{
-    flex-direction: column;
-    height: 160vh;
-   }
+   .caixa-van {
+    grid-template-areas: 
+    "bloco1 bloco1"
+    "bloco2 bloco4"
+    "bloco3 bloco4"
+    "bloco5 bloco5"
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+}
 
    .app-geral{
     flex-direction: column;
@@ -648,6 +689,16 @@ h1{
     align-items: center;
 
    }
+
+   .trc-pr{
+    grid-template-areas: 
+    "trc-dt"
+    "trc-dt"
+    "trc-dt"
+    "trc-dt"
+    ;
+
+}
 
 }
 
