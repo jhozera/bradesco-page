@@ -76,7 +76,7 @@ h1{
 .centralizador {
     display: grid;
     place-items: center; /* Centraliza horizontal e verticalmente */
-    height: 100vh; /* Ocupa toda a altura da tela */
+    height: 80vh; /* Ocupa toda a altura da tela */
 }
 
 .caixa-van {
@@ -218,7 +218,7 @@ h1{
     "trc-dt trc-dt"
     ;
     place-content: center;
-    padding: 10px;
+    padding: 0;
     gap: 10px;
     height: 60vh;
     
@@ -286,8 +286,8 @@ h1{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    padding-top: 200px;
-    margin: 10px;
+    padding-top: 0;
+    margin: 0;
 }
 
 
@@ -298,7 +298,7 @@ h1{
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 100vh;
+    height: 75vh;
 }
 
 
@@ -435,8 +435,6 @@ h1{
 .slide {
     width: 100%;
     flex-shrink: 0;
-    animation: slide-animation 20s infinite;
-
 }
 
 .slide img {
@@ -476,17 +474,17 @@ h1{
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 
-/* .navigation label {
+.navigation label {
     background-color: #ddd;
     border-radius: 50%;
     width: 12px;
     height: 12px;
     cursor: pointer;
-    transition: background-color 0.20s;
-} */
+    transition: background-color 0.5s;
+}
 
 #slide1:checked ~ .navigation label[for="slide1"],
 #slide2:checked ~ .navigation label[for="slide2"],
@@ -495,19 +493,6 @@ h1{
 #slide5:checked ~ .navigation label[for="slide5"] {
     background-color: #555;
 }
-
-@keyframes slide-animation {
-    0% { transform: translateX(0%); }
-    20% { transform: translateX(0%); }
-    25% { transform: translateX(-100%); }
-    45% { transform: translateX(-100%); }
-    50% { transform: translateX(-200%); }
-    70% { transform: translateX(-200%); }
-    75% { transform: translateX(-300%); }
-    95% { transform: translateX(-300%); }
-    100% { transform: translateX(-400%); }
-}
-
 
 
 .pr-nav a{
@@ -583,10 +568,11 @@ h1{
 
    .title-bra{
     text-align: center;
+    padding-top: 100px;
    }
 
    .trc-pr{
-    height: 140vh;
+    height: 90vh;
    }
 
    .caixa-van{
@@ -664,7 +650,7 @@ h1{
 
 
    .trc-pr{
-    height: 130vh;
+    height: 90vh;
    }
 
    .caixa-van {
@@ -760,7 +746,7 @@ h1{
    }
 
    .trc-pr{
-    height: auto; /* Ou um valor fixo adequado */
+    height: 100vh; 
    }
 
    .caixa-van{

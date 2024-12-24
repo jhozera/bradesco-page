@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <img src="./imagem/logobradesco.png" >
+            <img src="./imagem/LOGO BRADESCO.png" >
             <div class="pr-nav">
                 <a href="https://banco.bradesco/assets/common/pdf/Empresas-Credenciadas-de-Cobranca-Amigavel.pdf"><p>Parceiro Autorizado  
                     <br>
@@ -108,7 +108,7 @@
            <h4  class="highlighted-textr">Aproveite todas as 
             <br>
             vantagens pelo app!</h4>
-            <p> O aplicativo Bradesco Seguros traz uma experiência digital simples,<br>
+            <p> O aplicativo Bradesco traz uma experiência digital simples,<br>
                 fácil e confiável para seus clientes e segurados, <br>
                 com tudo o que você precisa para viver tranquilo <br>
                 e protegido na palma da sua mão.</p>
@@ -233,5 +233,26 @@
         </div>
     </footer>
 </main>
+<script>
+    const inputs = document.querySelectorAll('.carousel input');
+const totalSlides = inputs.length;
+let currentIndex = 0;
+
+function autoSlide() {
+    inputs[currentIndex].checked = false; 
+    currentIndex = (currentIndex + 1) % totalSlides; 
+    inputs[currentIndex].checked = true; 
+}
+
+let slideInterval = setInterval(autoSlide, 4000);
+
+inputs.forEach(input => {
+    input.addEventListener('click', () => {
+        clearInterval(slideInterval); 
+        slideInterval = setInterval(autoSlide, 4000); 
+    });
+});
+
+</script>
 </body>
 </html>
