@@ -498,6 +498,8 @@ h1{
 .pr-nav a{
     text-decoration: none;
     color: white;
+    font-size: 15px;
+
 }
 /* @media (min-width: 1200px) {
     .trc-pr{
