@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <img src="./imagem/LOGO BRADESCO.png" >
+            <img src="./imagem/LOGO BRADESCO.png" alt="logo bradesco" >
             <div class="pr-nav">
                 <a href="https://banco.bradesco/assets/common/pdf/Empresas-Credenciadas-de-Cobranca-Amigavel.pdf"><p>Parceiro Autorizado  
                     <br>
@@ -49,12 +49,12 @@
     </div>
 </div>
     <div class="highlighted-text">
-        <h2>Nossos soluções para você</h2>
+        <h2>Nossas soluções para você</h2>
       </div>
       <p class="description">As melhores condições de pagamento do mercado.</p>
     <div class="button">
         <div class="button-a">
-            <img src="./imagem/whatsapp.png" style="height: 50px;">
+            <img src="./imagem/whatsapp.png" alt="logo whatsapp" style="height: 50px;">
             <br>
         <a href="https://api.whatsapp.com/send?phone=554130220411">
             <p>
@@ -67,7 +67,7 @@
         </a>
     </div>
     <div class="button-b">
-        <img src="./imagem/chamada-telefonica.png" style="height: 50px;">
+        <img src="./imagem/chamada-telefonica.png" alt="telefone" style="height: 50px;">
         <br>
         <a href="tel:+08009410430">
             <p>
@@ -80,7 +80,7 @@
         </a>
     </div>
     <div class="button-c">
-        <img src="./imagem/comente.png" style="height: 50px;">
+        <img src="./imagem/comente.png" alt="logo" style="height: 50px;">
         <br>
         <a href="https://nd-bradesco.negociedigital.com.br/?utm_campaign=campanha_homepage&utm_source=bradesco&utm_medium=referral">
             <p>
@@ -91,7 +91,7 @@
         </a>
     </div>
     <div class="button-d">
-        <img src="./imagem/comente.png" style="height: 50px;">
+        <img src="./imagem/comente.png" alt="logo" style="height: 50px;">
         <br>
         <a href="https://api.whatsapp.com/send?phone=554130220411">
             <p>
@@ -108,13 +108,12 @@
            <h4  class="highlighted-textr">Aproveite todas as 
             <br>
             vantagens pelo app!</h4>
-            <p> O aplicativo Bradesco traz uma experiência digital simples,<br>
-                fácil e confiável para seus clientes e segurados, <br>
-                com tudo o que você precisa para viver tranquilo <br>
-                e protegido na palma da sua mão.</p>
+            <p> O aplicativo Bradesco oferece tudo o que você precisa para viver <br>
+                tranquilo e protegido. Regularize sua situação e <br>
+                continue aproveitando nossos serviços com segurança e facilidade.</p>
         </div>
         <div class="app-ft">
-             <img src="./imagem/app bradesco.png">
+             <img src="./imagem/app bradesco.png" alt="app bradesco">
          </div>
         </div>
     </div>
@@ -174,49 +173,35 @@
         <p>Mais de 20 anos de experiência no mercado</p>
     </strong>
     </div>
+    <div class="title-trc">
+        <h4>TRC Taborda</h4>
+        <p>Mais de 20 anos de experiência no mercado</p>
+    </div>
     <div class="trc-pr">
         <div class="trc-dt">
-            <img src="./imagem/trc logo.png" alt="Imagem 1">
+            <img src="./imagem/Vantagens-Loja.jpg" alt="Imagem 1">
             <div class="text-overlay">
                 <a href="https://trctaborda.com.br/quem-somos">
-                <p>
-                    Nosso <br>
-                    <strong>Compromisso</strong>
-                </p>
-            </a>
+                    <p>Nosso <br><strong>Compromisso</strong></p>
+                </a>
             </div>
         </div>
+
         <div class="trc-dt">
             <img src="./imagem/seugrança.png" alt="Imagem 2">
             <div class="text-overlay">
                 <a href="https://trctaborda.com.br/servicos">
-                <p>
-                    Sua e Nossa <br>
-                    <strong>Segurança</strong>
-                </p>
-            </a>
+                    <p>Sua e Nossa <br><strong>Segurança</strong></p>
+                </a>
             </div>
         </div>
+
         <div class="trc-dt">
-            <img src="./imagem/Design sem nome (18).png" alt="Imagem 3">
+            <img src="./imagem/Vantagens-BSC.jpg" alt="Imagem 3">
             <div class="text-overlay">
                 <a href="https://trctaborda.com.br/parceiros">
-                <p>
-                    Nossos <br>
-                    <strong>Parceiros</strong>
-                </p>
-            </a>
-            </div>
-        </div>
-        <div class="trc-dt">
-            <img src="./imagem/trc logo.png" alt="Imagem 1">
-            <div class="text-overlay">
-                <a href="https://trctaborda.com.br/">
-                <p>
-                    Mais sobre a <br>
-                    <strong>TRC Taborda</strong>
-                </p>
-            </a>
+                    <p>Nossos <br><strong>Parceiros</strong></p>
+                </a>
             </div>
         </div>
     </div>
@@ -233,26 +218,6 @@
         </div>
     </footer>
 </main>
-<script>
-    const inputs = document.querySelectorAll('.carousel input');
-const totalSlides = inputs.length;
-let currentIndex = 0;
-
-function autoSlide() {
-    inputs[currentIndex].checked = false; 
-    currentIndex = (currentIndex + 1) % totalSlides; 
-    inputs[currentIndex].checked = true; 
-}
-
-let slideInterval = setInterval(autoSlide, 4000);
-
-inputs.forEach(input => {
-    input.addEventListener('click', () => {
-        clearInterval(slideInterval); 
-        slideInterval = setInterval(autoSlide, 4000); 
-    });
-});
-
-</script>
+<script src="./index.js"></script>
 </body>
 </html>

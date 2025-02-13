@@ -25,20 +25,7 @@ nav{
     width: 100%;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; */
 }
-
-/* .pr-pri{
-    display: flex;
-    justify-content: space-between;
-    padding: 100px;
-    margin: 100px;
-    height: 50vh;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    
-} */
 
 h1{
     font-size: 45px;
@@ -75,8 +62,9 @@ h1{
 
 .centralizador {
     display: grid;
-    place-items: center; /* Centraliza horizontal e verticalmente */
-    height: 80vh; /* Ocupa toda a altura da tela */
+    place-items: center; 
+    height: auto;
+    padding: 50px;
 }
 
 .caixa-van {
@@ -87,8 +75,8 @@ h1{
     grid-template-columns: 2fr 2fr 2fr;
     gap: 10px;
     padding: 10px;
-    max-width: 1200px; /* Largura máxima do grid */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    max-width: 1200px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     height: 700px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -212,70 +200,60 @@ h1{
 }
 
 .trc-pr {
-    display: grid;
-    grid-template-areas: 
-    "trc-dt trc-dt"
-    "trc-dt trc-dt"
-    ;
-    place-content: center;
-    padding: 0;
-    gap: 10px;
-    height: 60vh;
-    
-  }
-
-.trc-dt {
-    position: relative; 
-    width: 400px;
-    height: 180px; 
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    height: 50vh;
 }
 
-.trc-pr a{
-    text-decoration: none;
-    color: white;
+.trc-dt {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .trc-dt:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .trc-dt img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
+    transition: filter 0.3s ease;
 }
 
-.trc-dt .text-overlay {
+.trc-dt:hover img {
+    filter: brightness(0.7);
+}
+
+.text-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5); 
+    bottom: 10px;
+    left: 10px;
     color: white;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 19px;
-    font-family: Arial, Helvetica, sans-serif;
-    
-
-
+    font-size: 16px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-.trc-dt .text-overlay strong {
-    font-size: 22px;
-    color: #ffffff; 
-    font-family: Arial, Helvetica, sans-serif;
+.text-overlay a {
+    text-decoration: none;
+    color: white;
+}
+
+.text-overlay p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 
@@ -334,6 +312,7 @@ h1{
     display: flex;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
   }
 
   .highlighted-textr::before {
@@ -501,13 +480,6 @@ h1{
     font-size: 12px;
 
 }
-/* @media (min-width: 1200px) {
-    .trc-pr{
-        height: 110vh;
-       }
-    
-  
-} */
 
 /* Notebooks (entre 992px e 1200px) */
 @media (max-width: 1200px) {
@@ -528,11 +500,12 @@ h1{
    }
 
    .trc-pr{
-    height: 90vh;
+    height: auto;
+    padding: 60px;
    }
 
    .caixa-van{
-    height: 60vh;
+    height:auto;
     padding: 20px;
    }
 
@@ -545,7 +518,7 @@ h1{
     overflow: hidden; 
     max-width: 100%;
     margin: 0 auto;
-    height: 100%;
+    height: auto;
    }
 
 }
@@ -556,184 +529,10 @@ h1{
         overflow-x: hidden;
         width: 100%;
         height: auto;
-  
-      }
-  
-    nav{
-        width: 100%;
-    }
-    
-   .button{
-    flex-wrap: wrap;
-   }
-   
-
-   .title-bra{
-    text-align: center;
-    padding-top: 100px;
-   }
-
-   .trc-pr{
-    height: 90vh;
-   }
-
-   .caixa-van{
-    height: 90vh;
-   }
-
-   .app-geral{
-    flex-direction: column;
-   }
-
-   .button-a, .button-b, .button-c, .button-d{
-    display: flex;
-    height: 100px;
-    align-items: center;
-
-   }
-
-   .caixa-app{
-    overflow: hidden; 
-    max-width: 100%;
-    margin: 0 auto;
-    height: 100%;
-   }
-
-   .trc-pr{
-    grid-template-areas: 
-    "trc-dt"
-    "trc-dt"
-    "trc-dt"
-    "trc-dt"
-    ;
-
-}
-
-.carousel{ 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  
-  }
-  
-  .slide img {
-      width: 100%;
-      height: 100%; 
-      object-fit: cover; 
-      display: block;
-  }
-
-}
-
-/* Celulares (abaixo de 768px) */
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        height: auto;
-  
-      }
-  
-    nav{
-        width: 100%;
-    }
-    
-    .button{
-        flex-wrap: wrap;
-        gap: 30px;
-        padding: 25px;
-        margin: 10px;
-       }
-       
-    .title-bra{
-        height: auto;
-    }
-
-
-
-   .trc-pr{
-    height: 110vh;
-   }
-
-   .caixa-van {
-    grid-template-areas: 
-    "bloco1 bloco1"
-    "bloco2 bloco4"
-    "bloco3 bloco4"
-    "bloco5 bloco5"
-    ;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
-}
-
-   .app-geral{
-    flex-direction: column;
-   }
-
-   .caixa-app{
-    overflow: hidden; 
-    max-width: 100%;
-    margin: 0 auto;
-    height: 100%;
-   }
-
-   .app-ft img{
-    max-width: 100%;
-    height: auto;
-   }
-
-   .app-ft{
-    margin: 0 auto;
-    text-align: center;
-
-   }
-   .button-a, .button-b, .button-c, .button-d{
-    display: flex;
-    height: 100px;
-    align-items: center;
-
-   }
-
-   .trc-pr{
-    grid-template-areas: 
-    "trc-dt"
-    "trc-dt"
-    "trc-dt"
-    "trc-dt"
-    ;
-
-}
-
-.carousel{ 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  
-  }
-  
-  .slide img {
-      width: 100%;
-      height: 100%; 
-      object-fit: cover; 
-      display: block;
-  }
-
-}
-
-/* Celulares Pequenos (abaixo de 576px) */
-@media (max-width: 576px) {
-
-    body {
-        overflow-x: hidden;
-        width: 100%;
-        height: auto;
         margin: 0;
         padding: 0;
   
       }
-  
-    /* nav{
-        width: 100%;
-    } */
     
    .button{
     flex-wrap: wrap;
@@ -745,8 +544,9 @@ h1{
 
    
    .title-bra{
-    margin-top: 300px;
     text-align: center;
+    height: auto;
+    padding: 30px;
    }
 
      .trc-pr{
@@ -766,7 +566,7 @@ h1{
     overflow: hidden; 
     max-width: 100%; 
     margin: 0 auto;
-    height: 100%;
+    height: auto;
    }
 
    .app-ft img{
@@ -787,24 +587,19 @@ h1{
     font-size: 18px;
    }
 
+   .centralizador{
+    height: auto;
+   }
+
    .caixa-van {
     grid-template-areas: 
     "bloco1 bloco1"
-    "bloco2 bloco4  "
-    "bloco3 bloco4"
+    "bloco2 bloco2"
+    "bloco3 bloco3"
+    "bloco4 bloco4"
     "bloco5 bloco5"
     ;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-
-
-.trc-pr{
-    grid-template-areas: 
-    "trc-dt"
-    "trc-dt"
-    "trc-dt"
-    "trc-dt"
-    ;
 
 }
 
@@ -814,6 +609,233 @@ h1{
   object-fit: cover;
 
 }
+
+.trc-pr{
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+}
+
+    .trc-dt{
+    width: 300px;
+}
+
+
+}
+
+/* Celulares (abaixo de 768px) */
+@media (max-width: 768px) {
+       body {
+        overflow-x: hidden;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+  
+      }
+    
+   .button{
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px;
+    margin: 10px;
+   }
+   
+
+   
+   .title-bra{
+    text-align: center;
+    height: auto;
+    padding: 30px;
+   }
+
+     .trc-pr{
+    height: 135vh; 
+   }
+
+   .caixa-van{
+    flex-direction: column;
+    height: auto;
+   }
+
+   .app-geral{
+    flex-direction: column;
+   }
+
+   .caixa-app{
+    overflow: hidden; 
+    max-width: 100%; 
+    margin: 0 auto;
+    height: auto;
+   }
+
+   .app-ft img{
+    max-width: 100%;
+    height: auto;
+   }
+
+   .app-ft{
+    margin: 0 auto;
+    text-align: center;
+
+   }
+
+   .button-a, .button-b, .button-c, .button-d{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    font-size: 18px;
+   }
+
+   .centralizador{
+    height: auto;
+   }
+
+   .caixa-van {
+    grid-template-areas: 
+    "bloco1 bloco1"
+    "bloco2 bloco2"
+    "bloco3 bloco3"
+    "bloco4 bloco4"
+    "bloco5 bloco5"
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+.carousel{ 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.trc-pr{
+    flex-direction: column;
+    height: auto;
+    padding: 60px;
+    
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+}
+
+    .trc-dt{
+    width: 300px;
+}
+
+
+ }
+
+/* Celulares Pequenos (abaixo de 576px) */
+@media (max-width: 576px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+  
+      }
+    
+   .button{
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 25px;
+    margin: 10px;
+   }
+   
+
+   
+   .title-bra{
+    text-align: center;
+    height: auto;
+    padding: 30px;
+   }
+
+     .trc-pr{
+    height: 135vh; 
+   }
+
+   .caixa-van{
+    flex-direction: column;
+    height: auto;
+   }
+
+   .app-geral{
+    flex-direction: column;
+   }
+
+   .caixa-app{
+    overflow: hidden; 
+    max-width: 100%; 
+    margin: 0 auto;
+    height: auto;
+   }
+
+   .app-ft img{
+    max-width: 100%;
+    height: auto;
+   }
+
+   .app-ft{
+    margin: 0 auto;
+    text-align: center;
+
+   }
+
+   .button-a, .button-b, .button-c, .button-d{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    font-size: 18px;
+   }
+
+   .centralizador{
+    height: auto;
+   }
+
+   .caixa-van {
+    grid-template-areas: 
+    "bloco1 bloco1"
+    "bloco2 bloco2"
+    "bloco3 bloco3"
+    "bloco4 bloco4"
+    "bloco5 bloco5"
+    ;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+.carousel{ 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.trc-pr{
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    
+}
+
 
 .slide img {
     width: 100%;
